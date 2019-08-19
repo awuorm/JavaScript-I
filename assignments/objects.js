@@ -121,21 +121,24 @@ const parent = {
     }
 }
 
+speak = ( ) => this.name
 
 // Log the parent object's name
-this.speak = parent.name;
-console.log("Parent's name is " + this.speak);
+this.name = parent.name;
+console.log("Hello my name is " + speak());
 
 // Log the child's age
-this.speak = parent.child.age;
-console.log("Child's age is " + this.speak);
+this.name = parent.child.age;
+console.log("Hello my age is " + speak());
 
 // Log the name and age of the grandchild
-let grandAge = this.speak = parent.child.grandchild.age;
- let grandName = this.speak = parent.child.grandchild.name;
-console.log("Grandchild's age is " + grandAge, " and name is " + grandName);
+this.name = parent.child.grandchild.name;
+console.log("Hello my name is " + speak() +  " and age is " + parent.child.grandchild.age);
 
 // Have the parent speak
+
+
+
 
 // Have the child speak
 
